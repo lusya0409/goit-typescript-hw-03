@@ -33,7 +33,7 @@ class MyHouse extends House {
     this.tenants = [];
   }
   public openDoor(key: Key) {
-    if (this.key === key) {
+    if (this.key.getSignature() === key.getSignature()) {
       this.door = true;
     }
   }
